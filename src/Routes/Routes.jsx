@@ -11,6 +11,8 @@ import MyToy from "../Pages/MyToy/MyToy";
 import Blog from "../Pages/Blog/Blog";
 import AddToy from "../Pages/AddToy/AddToy";
 import UpdateData from "../Pages/UpdateData/UpdateData";
+import PrivateRoute from "../Providers/PrivateRoute/PrivateRoute";
+import Details from "../Pages/Details/Details";
 
 
   export const router = createBrowserRouter([
