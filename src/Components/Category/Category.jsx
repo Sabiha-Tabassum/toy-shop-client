@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-
-import CategoryData from '../CategoryData/CategoryData';
 import UseMenu from '../../Hooks/UseMenu/UseMenu';
+import CategoryData from '../CategoryData/CategoryData';
 
 const Category = () => {
     const [menu] = UseMenu();
