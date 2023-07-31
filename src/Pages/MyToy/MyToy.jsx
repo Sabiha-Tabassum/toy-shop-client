@@ -1,11 +1,12 @@
-import {  useEffect, useState } from "react";
+import {  useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import MyToyData from "./MyToyData";
+import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 
 
 const MyToy = () => {
-    // const { user } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([]);
     const navigate = useNavigate()
 

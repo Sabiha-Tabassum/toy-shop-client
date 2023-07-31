@@ -13,12 +13,14 @@ import AddToy from "../Pages/AddToy/AddToy";
 import UpdateData from "../Pages/UpdateData/UpdateData";
 import PrivateRoute from "../Providers/PrivateRoute/PrivateRoute";
 import Details from "../Pages/Details/Details";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
   export const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children:[
         {
             path: '/',

@@ -1,9 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../images/limousine.png'
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 
 const Navbar = () => {
-    // const { user, logOut } = useContext(AuthContext);
-    // const [isHovered, setIsHovered] = useState(false);
+    const { user, logOut } = useContext(AuthContext);
+    const [isHovered, setIsHovered] = useState(false);
     const navItems = <>
         <div className='mr-4 text-xl font-semibold'>
             <NavLink
@@ -68,19 +70,19 @@ const Navbar = () => {
 
     </>
 
-    // const handleLogOut = () => {
-    //     logOut()
-    //         .then(() => { })
-    //         .catch(error => console.log(error));
-    // };
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error));
+    };
 
-    // const handleMouseEnter = () => {
-    //     setIsHovered(true);
-    // };
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
 
-    // const handleMouseLeave = () => {
-    //     setIsHovered(false);
-    // };
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
 
 
     return (

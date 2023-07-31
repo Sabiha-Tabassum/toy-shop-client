@@ -2,14 +2,16 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { FaGoogle } from 'react-icons/fa';
-
-
-import { useState } from "react";
+import Lottie from "lottie-react";
+import loginAnimation from '../../assets/106680-login-and-sign-up.json'
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 
 
 const Login = () => {
 
-    // const { logIn, updateProfile, googleSignIn } = useContext(AuthContext);
+    const { logIn, updateProfile, googleSignIn } = useContext(AuthContext);
+
     const [error, setError] = useState('');
 
     const navigate = useNavigate();
@@ -72,7 +74,7 @@ const Login = () => {
             <div className="hero min-h-screen  bg-slate-100 ">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
-
+                    <Lottie animationData={loginAnimation} loop={true} />
                        
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
