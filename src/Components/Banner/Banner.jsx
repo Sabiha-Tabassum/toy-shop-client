@@ -1,13 +1,10 @@
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+
 import bg from '../../images/truck-stacking-wooden-blocks.jpg'
-import { useEffect } from 'react';
+
 
 const Banner = () => {
 
-    useEffect(()=>{
-        Aos.init({duration: 3000})
-    },[])
+   
 
     return (
         <div className=' mb-2'>
@@ -15,7 +12,7 @@ const Banner = () => {
                 <img src={bg} alt="" />
                 <div className=" "></div>
                 <div className=" ">
-                    <div className="absolute top-16 left-20" data-aos="fade-right">
+                    <div className="absolute top-16 left-20" >
                         <h1 className='font-bold text-4xl text-amber-400'>Welcome to our<br /><span className=''>shop____</span> </h1>
                         <br />
 
