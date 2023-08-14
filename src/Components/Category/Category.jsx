@@ -3,8 +3,16 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import UseMenu from '../../Hooks/UseMenu/UseMenu';
 import CategoryData from '../CategoryData/CategoryData';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Category = () => {
+
+    useEffect(()=>{
+        Aos.init({duration: 3000})
+    },[])
+
     const [menu] = UseMenu();
     // console.log(menu)
     const policeCar = menu.filter(item => item.subCategory === "Lego Police Car");
@@ -29,7 +37,7 @@ const Category = () => {
                     <Tab>Porsche</Tab>
                 </TabList>
                 <TabPanel>
-                    <div className='grid grid-cols-2'>
+                    <div className='grid grid-cols-2'data-aos="flip-down">
                         {
                             policeCar.map(item => <CategoryData
                                 key={item._id}
@@ -39,7 +47,7 @@ const Category = () => {
 
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid grid-cols-2'>
+                    <div className='grid grid-cols-2'data-aos="flip-up">
                         {
                             lamborghini.map(item => <CategoryData
                                 key={item._id}
@@ -49,7 +57,7 @@ const Category = () => {
 
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid grid-cols-2'>
+                    <div className='grid grid-cols-2'data-aos="flip-down">
                         {
                             ferrari.map(item => <CategoryData
                                 key={item._id}
@@ -59,7 +67,7 @@ const Category = () => {
 
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid grid-cols-2'>
+                    <div className='grid grid-cols-2'data-aos="flip-up">
                         {
                             matchbox.map(item => <CategoryData
                                 key={item._id}
@@ -69,7 +77,7 @@ const Category = () => {
 
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid grid-cols-2'>
+                    <div className='grid grid-cols-2'data-aos="flip-down">
                         {
                             porsche.map(item => <CategoryData
                                 key={item._id}

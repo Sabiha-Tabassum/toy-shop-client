@@ -16,7 +16,7 @@ const UpdateData = () => {
 
     const onSubmit = (data) => {
 
-        fetch(`http://localhost:5000/addToy/${_id}`, {
+        fetch(`https://toy-shop-backend-vert.vercel.app/addToy/${_id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),

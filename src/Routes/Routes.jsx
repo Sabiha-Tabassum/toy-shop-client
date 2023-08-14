@@ -60,13 +60,13 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
         {
             path: 'details/:id',
             element: <PrivateRoute><Details></Details></PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5000/allToys/${params.id}`)
+            loader: ({params}) => fetch(`https://toy-shop-backend-vert.vercel.app/allToys/${params.id}`)
         },
 
         {
             path: 'updateData/:id',
             element: <UpdateData></UpdateData>,
-            loader: ({params}) => fetch(`http://localhost:5000/addToy/${params.id}`)
+            loader: ({params}) => fetch(`https://toy-shop-backend-vert.vercel.app/addToy/${params.id}`)
         }
       ]
     },

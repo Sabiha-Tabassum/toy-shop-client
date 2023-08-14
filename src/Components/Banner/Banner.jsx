@@ -10,7 +10,7 @@ const Banner = () => {
     },[])
 
     return (
-        <div className='max-w-6xl mx-auto mb-2'>
+        <div className=' mb-2'>
             <div className=" min-h-screen  relative"  >
                 <img src={bg} alt="" />
                 <div className=" "></div>
