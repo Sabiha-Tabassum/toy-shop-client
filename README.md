@@ -10,6 +10,7 @@ Currently, two official plugins are available:
 * Firebase authentication system is implemented for managing users
 * User can edit, delete and store his/her data in the database. JWT verification is implemented.
 Important Resources
+* Live Link https://toy-shop-2d28f.web.app/
 * React Router https://reactrouter.com/en/main
 * React Hook Form https://react-hook-form.com/
 * React AOS https://michalsnik.github.io/aos/
